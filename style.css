@@ -6,6 +6,7 @@
   --text-color: #2c3e50;
   --accent-color: #e74c3c;
   --border-color: #dee2e6;
+  --nav-height: 60px;
 }
 
 body {
@@ -89,6 +90,7 @@ section {
   max-width: 1200px;
   margin: 40px auto;
   padding: 0 20px;
+  scroll-margin-top: calc(var(--nav-height) + 20px); /* Add space for nav bar plus some padding */
 }
 
 h2 {
