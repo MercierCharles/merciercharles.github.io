@@ -100,6 +100,93 @@
     <p>
       As of the submission deadline, the multi-task training for the Multimodal Chain of Thought (MCOT) pipeline had commenced but could not be run to completion due to considerable time and computational requirements. Nonetheless, a comprehensive experimental framework was established to validate the approach. The experiment was designed to use the VQA-fine-tuned 4M-21-XL model as the starting point for the MCOT training phase.
     </p>
+
+    <h3>Example VQA Results</h3>
+    <div class="examples-table-container">
+      <table class="examples-table">
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Question</th>
+            <th>Parameters</th>
+            <th>Answer (VQA Model)</th>
+            <th>Answer (T2I Model)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><img src="assets/watch.jpg" alt="Watch" class="example-image"></td>
+            <td>What is the person wearing on their wrist?</td>
+            <td>temp: 0.2, top_p: 0.8, top_k: 0</td>
+            <td>them expressing genuineity with suit eyes sweater wear swirl or dual display of time?</td>
+            <td>rolex day - date swiss made stylish men ' s quartz watch without hand style care at present in vector inter white case with gold black watch image 4 mechanical swiss man ' s gift box mechanical watch do image</td>
+          </tr>
+          <tr>
+            <td><img src="assets/watch.jpg" alt="Watch" class="example-image"></td>
+            <td>What color is the watch strap?</td>
+            <td>temp: 0.5, top_p: 1.0, top_k: 0</td>
+            <td>if byf a color or color still,n now professional?</td>
+            <td>hammith g winder ban gold bar waterproof ruffle white luxury fashion women new</td>
+          </tr>
+          <tr>
+            <td><img src="assets/watch.jpg" alt="Watch" class="example-image"></td>
+            <td>Is the person wearing a long sleeve?</td>
+            <td>temp: 0.7, top_p: 0.8, top_k: 0</td>
+            <td>does that fit wrist band below this watch lineto?</td>
+            <td>panerai oyster silver on leather strap dive style time elegance pane describing hermes time marking brushed case back setting time etc watch academy gifts</td>
+          </tr>
+          <tr>
+            <td><img src="assets/football.webp" alt="Football" class="example-image"></td>
+            <td>What is inside the goal net?</td>
+            <td>temp: 0.5, top_p: 0.8, top_k: 50</td>
+            <td>what shape is ball?</td>
+            <td>browse and find out.</td>
+          </tr>
+          <tr>
+            <td><img src="assets/football.webp" alt="Football" class="example-image"></td>
+            <td>Is the ball black and white?</td>
+            <td>temp: 0.5, top_p: 0.0, top_k: 50</td>
+            <td>why should someone play soccer properly?</td>
+            <td>goals hd. thus insuffic beats statick than net policy soccer post surpass players association government eae football court practice net goals net sports net turf terraces grass green grass soccer ball goals green goal net stada academy clear 2018 final penalty area viewing galatia wallpapers goals goalkeeper goal net goals net goals</td>
+          </tr>
+          <tr>
+            <td><img src="assets/football.webp" alt="Football" class="example-image"></td>
+            <td>Is the game being played on grass?</td>
+            <td>temp: 0.5, top_p: 0.8, top_k: 50</td>
+            <td>##es ' net within focus ' or pictures?</td>
+            <td>know today. weight management & football betting chart</td>
+          </tr>
+          <tr>
+            <td><img src="assets/dogbeach.jpg" alt="Dog at Beach" class="example-image"></td>
+            <td>Can you see waves in the image?</td>
+            <td>temp: 0.2, top_p: 0.0, top_k: 0</td>
+            <td>along tracks or water?</td>
+            <td>dogs compete in plague shorter races - so social barking dogs do not need waves. corgi running across sic beach demonstrates extra rudeness</td>
+          </tr>
+          <tr>
+            <td><img src="assets/dog1.jpg" alt="Dog" class="example-image"></td>
+            <td>What color is the dog?</td>
+            <td>temp: 0.2, top_p: 0.0, top_k: 50</td>
+            <td>which ears are black spots?</td>
+            <td>types collar n calculator bland medium lay aggressive agility black brind black great dane sitting outdoors black great dane facts 1 great dane purebred</td>
+          </tr>
+          <tr>
+            <td><img src="assets/boat.jpg" alt="Boat" class="example-image"></td>
+            <td>Is the sky clear?</td>
+            <td>temp: 0.2, top_p: 0.8, top_k: 50</td>
+            <td>what near there are overcast clouds making it dark can it get very blue sky longer sunny more across? are there clouds in sky nearby? contain title toilets?. where they would sit which count? which pic or lined by who owns this image</td>
+            <td>yacht party yachts 32 0 38 catamaran rent april 2019 - saturday must clearly open gulf knowles marina party rental : south bay marina staple tuesdays boating charters luxury charter yachts 4 pier 1 week to downtown naples</td>
+          </tr>
+          <tr>
+            <td><img src="assets/dogbeach.jpg" alt="Dog at Beach" class="example-image"></td>
+            <td>Is this at the beach?</td>
+            <td>temp: 0.7, top_p: 1.0, top_k: 0</td>
+            <td>mammal animal walking in water?</td>
+            <td>dogs compete to chase bait ballgson across amazing golden beaches</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </section>
 
   <!-- Conclusion Section -->
