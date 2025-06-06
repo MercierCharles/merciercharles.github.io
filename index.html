@@ -4,121 +4,115 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MCoT-4M – EPFL AI Project</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.12/pdfobject.min.js"></script>
-  <style>
-    /* Custom styles can go here */
-    body {
-      scroll-behavior: smooth;
-    }
-  </style>
 </head>
-<body class="bg-white text-gray-800">
+<body>
   <!-- Navigation Bar -->
-  <nav class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-sm shadow-md z-50">
-    <div class="max-w-4xl mx-auto px-4">
-      <div class="flex justify-between items-center h-16">
-        <a href="#" class="text-xl font-bold text-gray-800">MCoT-4M</a>
-        <div class="flex space-x-6">
-          <a href="#abstract" class="text-gray-600 hover:text-gray-900">Abstract</a>
-          <a href="#architecture" class="text-gray-600 hover:text-gray-900">Architecture</a>
-          <a href="#mcot-steps" class="text-gray-600 hover:text-gray-900">MCoT Steps</a>
-          <a href="#results" class="text-gray-600 hover:text-gray-900">Results</a>
-          <a href="#paper" class="text-gray-600 hover:text-gray-900">Paper</a>
+  <nav>
+    <div class="nav-container">
+      <div class="nav-content">
+        <a href="#" class="nav-brand">MCoT-4M</a>
+        <div class="nav-links">
+          <a href="#abstract">Abstract</a>
+          <a href="#architecture">Architecture</a>
+          <a href="#mcot-steps">MCoT Steps</a>
+          <a href="#results">Results</a>
+          <a href="#paper">Paper</a>
         </div>
       </div>
     </div>
   </nav>
 
   <!-- Header -->
-  <header class="bg-gradient-to-r from-[#FFC5F3] to-[#D6F9FF] text-gray-800 py-20 text-center mt-16">
-    <h1 class="text-5xl font-bold">MCoT-4M</h1>
-    <p class="text-xl mt-4">Multimodal Chain of Thought for 4M Vision-Language Models</p>
+  <header>
+    <h1>MCoT-4M</h1>
+    <p>Multimodal Chain of Thought for 4M Vision-Language Models</p>
   </header>
 
   <!-- Preamble Section -->
-  <section class="max-w-4xl mx-auto px-4 py-10">
-    <h2 class="text-2xl font-semibold mb-4">Our Journey</h2>
-    <div class="bg-gray-50 rounded-lg p-6 shadow-sm">
-      <p class="mb-4">
+  <section>
+    <h2>Our Journey</h2>
+    <div class="journey-box">
+      <p>
         The development of MCoT-4M represents a significant advancement in multimodal AI research, building upon several key milestones:
       </p>
-      <ol class="list-decimal ml-6 space-y-3">
+      <ol class="journey-list">
         <li>
-          <span class="font-medium">Initial Challenge:</span>
-          <p class="text-gray-600">Traditional vision-language models struggled with complex reasoning tasks, particularly in visual question answering (VQA).</p>
+          <span class="title">Initial Challenge:</span>
+          <p class="description">Traditional vision-language models struggled with complex reasoning tasks, particularly in visual question answering (VQA).</p>
         </li>
         <li>
-          <span class="font-medium">EPFL 4M Foundation:</span>
-          <p class="text-gray-600">We started with the powerful EPFL 4M model, which provided a robust base for multimodal understanding.</p>
+          <span class="title">EPFL 4M Foundation:</span>
+          <p class="description">We started with the powerful EPFL 4M model, which provided a robust base for multimodal understanding.</p>
         </li>
         <li>
-          <span class="font-medium">MINT Integration:</span>
-          <p class="text-gray-600">By incorporating MINT's Multimodal Chain of Thought architecture, we introduced structured reasoning capabilities.</p>
+          <span class="title">MINT Integration:</span>
+          <p class="description">By incorporating MINT's Multimodal Chain of Thought architecture, we introduced structured reasoning capabilities.</p>
         </li>
         <li>
-          <span class="font-medium">Key Innovation:</span>
-          <p class="text-gray-600">Our breakthrough was integrating planning and acting stages directly into the 4M pipeline, eliminating the need for external LLMs.</p>
+          <span class="title">Key Innovation:</span>
+          <p class="description">Our breakthrough was integrating planning and acting stages directly into the 4M pipeline, eliminating the need for external LLMs.</p>
         </li>
         <li>
-          <span class="font-medium">Final Achievement:</span>
-          <p class="text-gray-600">The resulting MCoT-4M model demonstrates enhanced reasoning capabilities while maintaining efficiency and scalability.</p>
+          <span class="title">Final Achievement:</span>
+          <p class="description">The resulting MCoT-4M model demonstrates enhanced reasoning capabilities while maintaining efficiency and scalability.</p>
         </li>
       </ol>
     </div>
   </section>
 
   <!-- Abstract Section -->
-  <section id="abstract" class="max-w-4xl mx-auto px-4 py-10">
-    <h2 class="text-2xl font-semibold mb-4">Abstract</h2>
+  <section id="abstract">
+    <h2>Abstract</h2>
     <p>
       We extend the EPFL 4M model with MINT's Multimodal Chain of Thought (MCoT) architecture by integrating planning and acting stages directly into the 4M pipeline without external LLMs. This approach enhances reasoning in VQA tasks.
     </p>
   </section>
 
   <!-- Architecture Section -->
-  <section id="architecture" class="max-w-4xl mx-auto px-4 py-10">
-    <h2 class="text-2xl font-semibold mb-4">Architecture</h2>
-    <img src="assets/mcot-diagram.png" alt="MCoT Architecture Diagram" class="w-full rounded shadow">
-    <p class="mt-4">
+  <section id="architecture">
+    <h2>Architecture</h2>
+    <img src="assets/mcot-diagram.png" alt="MCoT Architecture Diagram" class="architecture-image">
+    <p>
       The MCoTWrapper module prepends stage-specific embeddings to the input, orchestrating the Planning → Acting sequence in a self-contained fashion using 4M-21XL checkpoints.
     </p>
   </section>
 
   <!-- MCoT Steps Table -->
-  <section id="mcot-steps" class="max-w-4xl mx-auto px-4 py-10">
-    <h2 class="text-2xl font-semibold mb-4">MCoT Process Steps</h2>
-    <div class="overflow-x-auto">
-      <table class="min-w-full bg-white border border-gray-200 rounded-lg shadow">
-        <thead class="bg-gray-50">
+  <section id="mcot-steps">
+    <h2>MCoT Process Steps</h2>
+    <div class="table-container">
+      <table>
+        <thead>
           <tr>
-            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Input</th>
-            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Planning</th>
-            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Acting</th>
-            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Reflection</th>
-            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Correction</th>
+            <th>Input</th>
+            <th>Planning</th>
+            <th>Acting</th>
+            <th>Reflection</th>
+            <th>Correction</th>
           </tr>
         </thead>
-        <tbody class="divide-y divide-gray-200">
+        <tbody>
           <tr>
-            <td class="px-6 py-4 whitespace-normal">
-              <p class="text-sm text-gray-900">Visual and textual input from the environment</p>
+            <td>
+              <p>Visual and textual input from the environment</p>
             </td>
-            <td class="px-6 py-4 whitespace-normal">
-              <p class="text-sm text-gray-900">Generate step-by-step reasoning plan</p>
-              <p class="text-sm text-gray-500">Break down complex tasks into manageable steps</p>
+            <td>
+              <p>Generate step-by-step reasoning plan</p>
+              <p>Break down complex tasks into manageable steps</p>
             </td>
-            <td class="px-6 py-4 whitespace-normal">
-              <p class="text-sm text-gray-900">Execute planned actions</p>
-              <p class="text-sm text-gray-500">Apply reasoning to solve the task</p>
+            <td>
+              <p>Execute planned actions</p>
+              <p>Apply reasoning to solve the task</p>
             </td>
-            <td class="px-6 py-4 whitespace-normal">
-              <p class="text-sm text-gray-900">Evaluate results</p>
-              <p class="text-sm text-gray-500">Analyze success of actions</p>
+            <td>
+              <p>Evaluate results</p>
+              <p>Analyze success of actions</p>
             </td>
-            <td class="px-6 py-4 whitespace-normal">
-              <p class="text-sm text-gray-900">Adjust approach if needed</p>
-              <p class="text-sm text-gray-500">Refine solution based on reflection</p>
+            <td>
+              <p>Adjust approach if needed</p>
+              <p>Refine solution based on reflection</p>
             </td>
           </tr>
         </tbody>
@@ -127,9 +121,9 @@
   </section>
 
   <!-- Results Section -->
-  <section id="results" class="max-w-4xl mx-auto px-4 py-10">
-    <h2 class="text-2xl font-semibold mb-4">Results</h2>
-    <ul class="list-disc ml-6">
+  <section id="results">
+    <h2>Results</h2>
+    <ul class="journey-list">
       <li>Training loss: 0.7</li>
       <li>Eval loss: 1.2</li>
       <li>Qualitative: More coherent VQA answers for complex reasoning</li>
@@ -137,21 +131,25 @@
   </section>
 
   <!-- PDF Viewer Section -->
-  <section id="paper" class="max-w-4xl mx-auto px-4 py-10">
-    <h2 class="text-2xl font-semibold mb-4">Paper Preview</h2>
-    <div id="pdf-viewer" class="w-full h-[800px] border border-gray-200 rounded-lg shadow"></div>
+  <section id="paper">
+    <h2>Paper Preview</h2>
+    <div id="pdf-viewer" class="pdf-container"></div>
   </section>
 
   <!-- Paper + GitHub -->
-  <section class="text-center py-10">
-    <a href="./assets/update.pdf" class="text-blue-600 underline text-lg">📄 Read the Paper</a> |
-    <a href="https://github.com/charlesmercier/mcot4M-website" class="text-blue-600 underline text-lg">💻 View on GitHub</a>
+  <section class="links-section">
+    <a href="assets/update.pdf">📄 Read the Paper</a> |
+    <a href="https://github.com/charlesmercier/mcot4M-website">💻 View on GitHub</a>
   </section>
 
   <!-- Footer -->
-  <footer class="text-center py-6 text-sm text-gray-500">
+  <footer>
     © 2025 EPFL – MCoT-4M Project
   </footer>
 
+  <script>
+    // Initialize PDF viewer
+    PDFObject.embed("assets/update.pdf", "#pdf-viewer");
+  </script>
 </body>
 </html>
